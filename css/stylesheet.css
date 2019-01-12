@@ -248,7 +248,11 @@ fieldset {
     flex-direction: column;
 }
 
-body > form:first-of-type > fieldset > legend {
+body > form:first-of-type > fieldset div {
+    margin: 0 auto;
+}
+
+body > form:first-of-type > fieldset legend {
     font-family: Pembroke Medium, Arial, serif;
     font-weight: 500;
     font-size: 1em;
