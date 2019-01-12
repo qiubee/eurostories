@@ -192,6 +192,7 @@ body > article:first-of-type footer {
 
 body > article:first-of-type footer svg {
     width: 1.5em;
+    height: 1.25em;
     fill: #FFF;
     margin-left: 5%;
 }
@@ -637,6 +638,8 @@ body > footer p {
 @media (min-width: 23.5em) and (max-width: 30em) {
 
     body > form:first-of-type button[type="submit"] {
+        margin: 0;
+        padding: 0;
         padding: 1em 2.8em;
         margin: 0 auto 1.5em auto;
     }
