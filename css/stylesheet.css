@@ -56,10 +56,11 @@ body {
 }
 
 header label, a > b, button > span,
-nav a span, main label span, 
-article li:nth-of-type(1) span, 
+nav a span, main label span,
+article li:nth-of-type(1) span:first-of-type,
 body > article:first-of-type p span,
-main article li:nth-child(2) span {
+main article li:nth-child(2) span:last-child,
+aside a span {
    position: absolute;
    top: -99em;
    left: -99em;
@@ -71,6 +72,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 ul, ol {
     list-style-type: none;
+    margin: 0;
     padding: 0;
 }
 
@@ -104,16 +106,23 @@ body > header > a > img {
 
 input[type="search"] {
     height: 1.4em;
-    width: 7em;
+    max-width: 7em;
     font-family: Pembroke Regular, Arial, serif;
     font-weight: 400;
     font-size: 1em;
-    border: solid #FFE600;
-    border-width: 0em 0em 0.25em 0em ;
+    border: none;
+    border-bottom: 0.15em solid #FFF;
     background-color: rgba(0, 0, 0, 0.0);
     color: #FFF;
     color: hsl(0, 0%, 100%);
     display: none;  /* tijdelijk verborgen */
+    -webkit-transition: border-color 0.5s ease;
+    -moz-transition: border-color 0.5s ease;
+    transition: border-color 0.5s ease;
+}
+
+input[type="search"]:focus {
+    border-color: #FFE600;
 }
 
 header button[type="submit"] {
@@ -172,7 +181,7 @@ body > article:first-of-type h3 {
     color: #FFF;
     margin-left: 5%;
     margin-top: 0.5em;
-    
+
 }
 
 body > article:first-of-type footer {
@@ -184,11 +193,11 @@ body > article:first-of-type footer {
 body > article:first-of-type footer svg {
     width: 1.5em;
     fill: #FFF;
-    margin-left: 5%; 
+    margin-left: 5%;
 }
 
 body > article:first-of-type p {
-    font-family: Pembroke Light;
+    font-family: Pembroke Light, Arial, serif;
     font-weight: 300;
     color: #FFF;
     margin-left: 0.5em;
@@ -199,7 +208,7 @@ body > article:first-of-type a {
     font-weight: 300;
     font-size: 1em;
     color: #55565A;
-    background-color: #FFE600; 
+    background-color: #FFE600;
     border-bottom: solid 0.15em #DEC204;
     border-radius: 0.25em;
     margin-top: 2em;
@@ -315,10 +324,8 @@ body > form:first-of-type button[type="submit"] {
     border-bottom: solid 0.15em #DEC204;
     border-radius: 0.25em;
     margin: 0 0.8em 1.5em 0.8em;
-    /margin: 0 auto 1.5em auto;
-    /padding: 1em auto;
     padding: 1em;
-    
+
 }
 
 body > form:first-of-type button[type="submit"]:hover {
@@ -366,10 +373,6 @@ body > form:first-of-type input[type="checkbox"]:hover + label:before {
     background: rgba(255, 255, 255, 0.85);
 }
 
-/body > form:first-of-type input[type="checkbox"]:focus + label:before {
-    box-shadow: 0 0 0 0.15em rgba(36, 181, 201, 1);
-}
-
 body > form:first-of-type input[type="checkbox"]:checked + label:after {
     content: "";
     position: absolute;
@@ -380,7 +383,7 @@ body > form:first-of-type input[type="checkbox"]:checked + label:after {
     height: 0.2em;
     box-shadow: 0.125em 0 0 #24B5C9, 0.25em 0 0 #24B5C9,  0.25em -0.125em 0 #24B5C9, 0.25em -0.25em 0 #24B5C9, 0.25em -0.375em 0 #24B5C9, 0.25em -0.5em 0 #24B5C9, 0.25em -0.6em 0 #24B5C9 ;
     transform: rotate(45deg);
-    
+
 }
 
 
@@ -399,7 +402,7 @@ main div:first-of-type {
 }
 
 h1 {
-    font-family: Pembroke Medium, Georgia, serif;
+    font-family: Pembroke Medium, Arial, serif;
     font-weight: 500;
     font-size: 1.125em;
     color: #06183D;
@@ -415,7 +418,7 @@ main select {
     font-weight: 400;
     font-size: 1em;
     height: 2em;
-    /margin-left: -0.25em;
+    padding: 0 1.5em 0 0;
     color: #FFF;
     border: none;
     border-bottom: solid 0.15em #109FB3;
@@ -432,23 +435,21 @@ main select:hover {
     cursor: pointer;
 }
 
-/main select:active {
-    background-color: white;
-}
-
-main select option {
-    /background-color: transparent;
-}
-
 main a:hover {
     cursor: default;
 }
 
+main a {
+    margin: 0;
+}
+
 main article {
-    margin: 1.25em 1.25em 0em 1.25em;
+    margin: 1.25em 0.5em 0em 0.5em;
     border: 0.1em solid rgba(36,181,201, 0.25);
     border-radius: 0.5em;
     box-shadow: 0em 0.375em 0.5em rgba(36,181,201, 0.1);
+    -webkit-transition: box-shadow 0.2s ease;
+    -moz-transition: box-shadow 0.2s ease;
     transition: box-shadow 0.2s ease;
 }
 
@@ -470,28 +471,159 @@ main article img {
 }
 
 main h3 {
-    font-family: Pembroke Medium, Georgia, serif;
+    font-family: Pembroke Medium, Arial, serif;
     font-weight: 500;
-    font-size: 1.125em;
+    font-size: 1.25em;
     color: #06183D;
-    margin: 1em 1.25em 0 1.25em;
+    margin: 0;
+    margin: 0.75em 1.25em 0 1em;
 }
 
 main footer {
-    margin: 0 1.25em 1.25em 1.25em;
+    margin: 0.25em 1.25em 1.25em 1.25em;
 }
 
-article ul li:nth-of-type(1) {
-    margin: -0.75em auto 0 0.25em;
+article ul li:first-child {
+    font-family: Pembroke Regular, Arial, serif;
+    font-weight: 400;
+    font-size: 1em;
+    color: #55565A;
+    margin: 0 auto 0.25em 0;
+}
+
+article ul li:first-child span:last-child {
+    display: inline-flex;
+    vertical-align: top;
+    font-size: 0.9em;
 }
 
 article li:nth-of-type(1) svg {
-    width: 0.75em;
+    width: 1em;
+    fill: #FFE600;
+}
+
+a[href$="de-kids.html"] li:first-child svg:last-of-type,
+a[href$="paranoia.html"] li:first-child svg:last-of-type,
+a[href$="droom-2.html"] li:first-child svg:last-of-type,
+a[href$="onomatopee.html"] li:first-child svg:last-of-type path:last-child,
+a[href$="moe.html"] li:first-child svg:nth-of-type(4) path:last-child,
+a[href$="moe.html"] li:first-child svg:last-of-type {
+    fill: #E6E2B9;
+}
+
+article ul li:last-child {
+    font-family: Pembroke Regular, Arial, serif;
+    font-weight: 400;
+    font-size: 1em;
+    color: #06183D;
 }
 
 article li:nth-of-type(2) svg {
     width: 1.5em;
-    fill: #55565A;
+    fill: #06183D;
+}
+
+main article li:nth-child(2) span:first-of-type {
+    display: inline-flex;
+    vertical-align: top;
+    font-size: 1em;
+    margin: -0.1em 0 0 0;
+    padding: 0 0 0 0.25em;
+}
+
+article ol {
+    margin: 1em auto 1em 0;
+}
+
+article ol li {
+    font-family: Pembroke Light, Arial, serif;
+    font-weight: 300;
+    font-size: 0.9em;
+    color: #FFF;
+    display: inline-flex;
+    background-color: #55565A;
+    padding: 0.25em 0.5em 0.35em 0.5em;
+    border-radius: 0.25em;
+}
+
+article time {
+    font-family: Pembroke Light, Arial, serif;
+    font-weight: 300;
+    font-size: 0.85em;
+    color: #55565A;
+}
+
+
+
+/* Footer */
+
+body > footer {
+    margin: 4em 0 3em 0;
+    border-top: 0.1em solid #f2f2f2;
+}
+
+body > footer h2 {
+    font-family: Pembroke Medium, Arial, serif;
+    font-weight: 500;
+    font-size: 1.25em;
+    color: #06183D;
+    margin: 1.25em auto 0 0.45em;
+}
+
+body > footer > ul {
+    margin: 1em 0 2.5em; 0;
+}
+
+body > footer > ul li {
+    margin: 0.25em auto 0.25em 0.6em;
+}
+
+body > footer > ul a {
+    font-family: Pembroke Regular, Arial, serif;
+    font-weight: 400;
+    font-size: 1em;
+    color: #24B5C9;
+}
+
+body > footer a:hover {
+    color: #109FB3;
+}
+
+aside h3 {
+    font-family: Pembroke Medium, Arial, serif;
+    font-weight: 500;
+    font-size: 1.25em;
+    color: #06183D;
+    margin: 0.5em auto 0 0.45em;
+}
+
+aside ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1em 0.25em;
+}
+
+aside li svg {
+    margin-right: 1em;
+    width: 1.5em;
+    fill: #24B5C9;
+}
+
+aside li:first-of-type svg {
+    margin-right: 0.75em;
+}
+
+aside li:last-of-type path:nth-last-of-type(n+2) {
+    fill: #FFF;
+}
+
+body > footer p {
+    font-family: Pembroke Light, Arial, serif;
+    font-weight: 300;
+    font-size: 0.85em;
+    color: #55565A;
+    margin: 2.5em auto 0em 0.7em;
 }
 
 
@@ -502,53 +634,43 @@ article li:nth-of-type(2) svg {
 
 /* Mobiel */
 
-
-
 @media (min-width: 23.5em) and (max-width: 30em) {
-    
+
     body > form:first-of-type button[type="submit"] {
         padding: 1em 2.8em;
         margin: 0 auto 1.5em auto;
     }
-    
-}
 
-/@media (max-height: 30em) and (orientation: landscape) {
-    
-    body {
-        background-color: #000;
-        background-color: hsl(0, 0, 0%);
-    }
 }
 
 /* Tablet */
 
 @media (min-width: 30em) and (max-width: 60em) {
-    
+
     body {
         background-color: firebrick;
     }
-    
+
     body > article:first-of-type {
         background-size: 120%;
         background-position: 70% 40%;
     }
-    
+
     body > form:first-of-type {
         max-width: 32.5em;
         margin-left: 5em;
         margin-right: 5em;
     }
-    
+
     body > form:first-of-type > fieldset > legend {
         font-size: 1.2em;
     }
-    
+
     body > form:first-of-type button[type="submit"] {
         padding: 1em;
         margin: 0 0.75em 1.5em 0.75em;
     }
-    
+
     main > div:nth-of-type(2) {
         margin: 1.25em auto 3.5em auto;
         display: grid;
@@ -557,32 +679,28 @@ article li:nth-of-type(2) svg {
         grid-column-gap: 0.75em;
         grid-row-gap: 1.25em;
     }
-    
+
     main article {
         margin: 0;
     }
-    
+
     main a:nth-of-type(odd) {
         grid-column: 2;
     }
-    
+
     main a:nth-of-type(even) {
         grid-column: 3;
-    }
-    
-    body > form:first-of-type label:nth-last-of-type(n+2) {
-        /margin: auto auto;
     }
     
 }
 
 @media (min-width: 32.25em) and (max-width: 60em) {
-    
+
     body > form:first-of-type button[type="submit"] {
         padding: 1em 2.8em;
         margin: 0 auto 1.5em auto;
     }
-    
+
 }
 
 @media (min-width: 43.5em) and (max-width: 60em) {
@@ -592,58 +710,43 @@ article li:nth-of-type(2) svg {
         background-size: 50em;
         background-position: center 25%;
     }
-    
+
         body > form:first-of-type {
         margin-left: auto;
         margin-right: auto;
     }
-    
-    
+
+
 }
 
-/@media (min-height: 30em) and (max-height: 60em) and (min-width: 60em) and (orientation: landscape) {
-    
-    body {
-        background-color: blue;
-    }
-}
-    
 /* Desktop */
-    
+
 @media (min-width: 60em) {
-    
+
     body {
         background-color: tomato;
-        /margin: 0 4.5em;
-        /display: grid;
-        /grid-template-columns: 4.5em auto auto auto 4.5em;
-        /grid-template-rows: auto;
     }
-    
+
     body > header {
         height: 4em;
     }
-    
-    body main, body > footer {
-        /margin: 0 4.5em;
-    }
-    
+
     body > header > a > img {
         height: 2em;
         margin: 1em;
     }
-    
+
     fieldset {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
     }
-    
+
     body > form:first-of-type label:nth-last-of-type(n+2) {
         display: inline-flex;
         flex-direction: row;
     }
-    
+
     body > form:first-of-type label:first-of-type {
         border-radius: 0.25em 0 0 0.25em;
    }
@@ -651,17 +754,19 @@ article li:nth-of-type(2) svg {
     body > form:first-of-type label:nth-of-type(3) {
         border-radius: 0 0.25em 0.25em 0;
     }
-    
+
     body > form:first-of-type label:last-of-type {
         order: 1;
     }
-    
+
     body > form:first-of-type button[type="submit"] {
         font-size: 1em;
     }
-    
+
     main article {
         margin: 0;
     }
 }
+
+
    
