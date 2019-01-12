@@ -466,7 +466,7 @@ main article header {
 main article img {
     max-height: 9em;
     object-fit: cover;
-    object-position: center 2.5%;
+    object-position: 0 2.5%;
     width: 100%;
 }
 
@@ -642,6 +642,14 @@ body > footer p {
     }
 
 }
+
+@media (max-height: 30em) and (orientation: landscape) {
+
+    body {
+        background-color: ivory;
+    }
+}
+
 
 /* Tablet */
 
