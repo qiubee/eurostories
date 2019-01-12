@@ -137,6 +137,7 @@ header button[type="submit"]:hover {
 
 button[type="submit"] svg {
     fill: #FFF;
+    height: 1.25em;
     width: 1.25em;
 }
 
