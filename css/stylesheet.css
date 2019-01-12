@@ -514,7 +514,7 @@ a[href$="droom-2.html"] li:first-child svg:last-of-type,
 a[href$="onomatopee.html"] li:first-child svg:last-of-type path:last-child,
 a[href$="moe.html"] li:first-child svg:nth-of-type(4) path:last-child,
 a[href$="moe.html"] li:first-child svg:last-of-type {
-    fill: #E6E2B9;
+    fill: #D5D3BA;
 }
 
 article ul li:last-child {
