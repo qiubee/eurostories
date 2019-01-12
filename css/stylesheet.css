@@ -567,7 +567,7 @@ body > footer h2 {
     font-weight: 500;
     font-size: 1.25em;
     color: #06183D;
-    margin: 1.25em auto 0 0.45em;
+    margin: 1.25em auto 0 1em;
 }
 
 body > footer > ul {
@@ -575,7 +575,7 @@ body > footer > ul {
 }
 
 body > footer > ul li {
-    margin: 0.25em auto 0.5em 0.6em;
+    margin: 0.25em auto 0.5em 1.25em;
 }
 
 body > footer > ul a {
@@ -594,14 +594,14 @@ aside h3 {
     font-weight: 500;
     font-size: 1.25em;
     color: #06183D;
-    margin: 0.5em auto 0 0.45em;
+    margin: 0.5em auto 0 1em;
 }
 
 aside ul {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 1em 0.25em;
+    margin: 1em auto 1em 0.9em;
 }
 
 aside li svg {
@@ -623,7 +623,7 @@ body > footer p {
     font-weight: 300;
     font-size: 0.85em;
     color: #55565A;
-    margin: 2.5em auto 0em 0.7em;
+    margin: 2.5em auto 0em 1.5em;
 }
 
 
@@ -634,7 +634,7 @@ body > footer p {
 
 /* Mobiel */
 
-@media (min-width: 23.5em) and (max-width: 30em) {
+@media screen and (min-width: 23.5em) and (max-width: 30em) {
 
     body > form:first-of-type button[type="submit"] {
         padding: 1em 2.8em;
