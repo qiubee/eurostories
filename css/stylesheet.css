@@ -95,30 +95,39 @@ body > header {
 }
 
 body > header form {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
     margin-left: auto;
     margin-right: 0.5em;
 }
 
 body > header > a > img {
+    padding-right: 1.5em;
     height: 1.75em;
-    margin: 0.5em;
+    margin: 0.5em 1em 0.5em 0.5em;
 }
 
 input[type="search"] {
     height: 1.4em;
-    max-width: 7em;
+    max-width: 11.5em;
     font-family: Pembroke Regular, Arial, serif;
     font-weight: 400;
     font-size: 1em;
     border: none;
-    border-bottom: 0.15em solid #FFF;
+    border-bottom: 0.15em solid transparent;
     background-color: rgba(0, 0, 0, 0.0);
     color: #FFF;
     color: hsl(0, 0%, 100%);
     display: none;  /* tijdelijk verborgen */
-    -webkit-transition: border-color 0.5s ease;
-    -moz-transition: border-color 0.5s ease;
-    transition: border-color 0.5s ease;
+    -webkit-transition: border-color 0.75s ease, width 0.75s ease;
+    -moz-transition: border-color 0.75s ease, width 0.75s ease;
+    transition: border-color 0.75s ease, width 0.75s ease;
+}
+
+input[type="search"].zoeken {
+    border-bottom: 0.15em solid #FFF;
+    width: 100%;
 }
 
 input[type="search"]:focus {
@@ -141,15 +150,31 @@ button[type="submit"] svg {
     width: 1.5em;
 }
 
+nav {
+    overflow: visible;
+}
+
+nav.verborgen {
+    overflow: hidden;
+}
+
 nav a {
     font-family: Pembroke Medium, Arial, serif;
     font-weight: 500;
     color: #FFF;
     margin-right: 0.5em;
+    -webkit-transition: color 0.5s ease-out, margin-right 0.75s ease-in-out;
+    -moz-transition: color 0.5s ease-out, margin-right 0.75s ease-in-out;
+    transition: color 0.5s ease-out, margin-right 0.75s ease-in-out;
 }
 
 nav a:hover {
     color: #24B5C9;
+}
+
+nav a.verborgen {
+    color: transparent;
+    margin-right: -4em;
 }
 
 
@@ -403,6 +428,7 @@ body > form:first-of-type input[type="checkbox"]:checked + label:after {
 /* Content */
 
 main div:first-of-type {
+    margin: 0.75em 0.5em 2.5em 0.5em;
     display: flex;
     flex-direction: row;
 }
@@ -412,11 +438,7 @@ h1 {
     font-weight: 500;
     font-size: 1.125em;
     color: #06183D;
-    margin: 1em auto 1.25em 0.5em;
-}
-
-main form {
-    margin: 0.75em 0.5em auto auto;
+    margin: 0.25em auto 0 0;
 }
 
 main select {
@@ -450,7 +472,7 @@ main a {
 }
 
 main article {
-    margin: 1.25em 0.5em 0em 0.5em;
+    margin: 1.25em 1.25em 0em 1.25em;
     border: 0.1em solid rgba(36,181,201, 0.25);
     border-radius: 0.5em;
     box-shadow: 0em 0.375em 0.5em rgba(36,181,201, 0.1);
@@ -514,7 +536,7 @@ a[href$="droom-2.html"] li:first-child svg:last-of-type,
 a[href$="onomatopee.html"] li:first-child svg:last-of-type path:last-child,
 a[href$="moe.html"] li:first-child svg:nth-of-type(4) path:last-child,
 a[href$="moe.html"] li:first-child svg:last-of-type {
-    fill: #DDDBD5;
+    fill: #D5D3BA;
 }
 
 article ul li:last-child {
@@ -640,11 +662,17 @@ body > footer p {
 
 /* Mobiel */
 
+@media (max-width: 30em) {
+
+    body > header form {
+        width: 100%;
+    }
+
+}
+
 @media (min-width: 23.5em) and (max-width: 30em) {
 
     body > form:first-of-type button[type="submit"] {
-        margin: 0;
-        padding: 0;
         padding: 1em 2.8em;
         margin: 0 auto 1.5em auto;
     }
