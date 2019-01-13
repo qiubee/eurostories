@@ -87,25 +87,38 @@ a {
 
 body > header {
     background-color: #06183D;
-    background-color: hsl(220, 82%, 13%);
+    background-color: hsl(220, 82%, 13%);    
+    height: 3.5em;
+    transition: height 0.5s ease-in-out;
+}
+
+body > header div:first-of-type {
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 3.5em;
+    margin: 0;
+    padding: 0;
+    transition: padding 0.5s ease-in-out;
 }
 
 body > header form {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    margin-top: 0.5em;
     margin-left: auto;
     margin-right: 0.5em;
+    width: auto;
+    -webkit-transition: width 0.75s ease;
+    -moz-transition: width 0.75s ease;
+    transition: width 0.75s ease;
 }
 
-body > header > a > img {
+body > header img:first-of-type {
     padding-right: 1.5em;
     height: 1.75em;
-    margin: 0.5em 1em 0.35em 0.5em;
+    margin: 0.75em 1em 0.35em 0.5em;
+    transition: height 0.5s ease-in-out;
 }
 
 input[type="search"] {
@@ -116,6 +129,8 @@ input[type="search"] {
     font-weight: 400;
     font-size: 1em;
     border: none;
+    -webkit-appearance: none;
+    border-radius: 0;
     border-bottom: 0.15em solid transparent;
     background-color: rgba(0, 0, 0, 0.0);
     color: #FFF;
@@ -123,8 +138,6 @@ input[type="search"] {
     -webkit-transition: border-color 0.75s ease, width 0.75s ease;
     -moz-transition: border-color 0.75s ease, width 0.75s ease;
     transition: border-color 0.25s ease, width 0.75s ease;
-    -webkit-appearance: none;
-    border-radius: 0;
 }
 
 input[type="search"].zoeken {
@@ -150,6 +163,7 @@ header button svg, header button[type="submit"] svg {
     fill: #FFF;
     width: 1.25em;
     height: 1.25em;
+    transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
 }
 
 nav {
@@ -163,12 +177,14 @@ nav.verborgen {
 nav a {
     font-family: Pembroke Medium, Arial, serif;
     font-weight: 500;
+    font-size: 1em;
     color: #FFF;
     display: inline-flex;
+    margin-top: 0.25em;
     margin-right: 0.5em;
     -webkit-transition: color 0.5s ease-out, margin-right 0.75s ease-in-out;
     -moz-transition: color 0.5s ease-out, margin-right 0.75s ease-in-out;
-    transition: color 0.5s ease-out, margin-right 0.75s ease-in-out;
+    transition: color 0.5s ease-out, margin-right 0.75s ease-in-out, font-size 0.5s ease-in-out;
 }
 
 nav a:hover {
@@ -186,12 +202,15 @@ nav a.verborgen {
 
 body > article:first-of-type {
     height: 100%;
+    margin-bottom: 1.5em;
     border-bottom: 0.5em solid #24B5C9;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
                 no-repeat
                 url(../images/verhalen/droom.png);
     background-size: 150%;
     background-position: 40% 40%;
+    background-color: #17192C;
+    transition: background-size 0.5s ease, background-position 1.5s ease;
 }
 
 body > article:first-of-type h2 {
@@ -201,6 +220,7 @@ body > article:first-of-type h2 {
     line-height: 1em;
     color: #FFF;
     padding: 5% 0% 0% 5%;
+    transition: font-size 0.5s ease-in-out;
 }
 
 body > article:first-of-type h3 {
@@ -210,7 +230,11 @@ body > article:first-of-type h3 {
     color: #FFF;
     margin-left: 5%;
     margin-top: 0.5em;
+    transition: font-size 0.5s ease-in-out;
+}
 
+body > article:first-of-type header {
+    margin: 0;
 }
 
 body > article:first-of-type footer {
@@ -224,13 +248,17 @@ body > article:first-of-type footer svg {
     height: 1.25em;
     fill: #FFF;
     margin-left: 5%;
+    transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
 }
 
 body > article:first-of-type p {
     font-family: Pembroke Light, Arial, serif;
     font-weight: 300;
+    font-size: 1em;
     color: #FFF;
     margin-left: 0.5em;
+    margin-top: 0;
+    transition: font-size 0.5s ease-in-out, margin-top 0.5s ease-in-out;
 }
 
 body > article:first-of-type a {
@@ -264,8 +292,9 @@ body > article:first-of-type a:focus {
 
 body > form:first-of-type  {
     background-color: #384664;
-    margin: 1.5em 0.5em 0 0.5em;
+    margin: 0em 0.5em 0 0.5em;
     border-radius: 0.25em;
+    transition: margin 0.35s ease-out;
 }
 
 fieldset {
@@ -276,7 +305,7 @@ fieldset {
     flex-direction: column;
 }
 
-body > form:first-of-type > fieldset div {
+body > form:first-of-type > fieldset div:first-of-type {
     margin: 0 auto;
 }
 
@@ -676,7 +705,10 @@ body > footer p {
 @media (max-width: 30em) {
 
     body > header form {
-        width: 100%;
+        width: 32.5%;
+        -webkit-transition: width 0.75s ease;
+        -moz-transition: width 0.75s ease;
+        transition: width 0.75s ease;
     }
 
 }
@@ -711,10 +743,11 @@ body > footer p {
         background-size: 120%;
         background-position: 70% 40%;
     }
-
+    
     body > form:first-of-type {
-        margin: 0 5em;
-        max-width: 32.5em;
+        margin: 0 2.5em;
+        /margin: auto;
+        max-width: 30em;
     }
 
     body > form:first-of-type > fieldset > legend {
@@ -727,11 +760,14 @@ body > footer p {
     }
 
     main {
-        display: grid;
-        grid-template-columns: 4em 2em 2em 4em;
-        grid-template-rows: auto;
+        /width: 28em;
+        width: 58em;
+        margin: 0 auto;
+        /display: grid;
+        grid-template-columns: auto 50% 50% auto;
+        grid-template-rows: 6em 15em auto;
         grid-column-gap: 1.25em;
-        grid-row-gap: 1.25em;
+        /grid-row-gap: 1.25em;
     }
 
     /main > div:nth-of-type(2) {
@@ -744,7 +780,8 @@ body > footer p {
     }
 
     main div:first-of-type {
-        grid-column: 2 / 5;
+        margin: 0;
+        grid-column: 2 / 3;
     }
 
     main article {
@@ -759,11 +796,13 @@ body > footer p {
         grid-column: 3;
     }
 
-    body > form:first-of-type label:nth-last-of-type(n+2) {
-        /margin: auto auto;
+    /body > form:first-of-type label:nth-last-of-type(n+2) {
+        margin: auto auto;
     }
 
 }
+
+
 
 /@media (min-width: 32.25em) and (max-width: 60em) {
 
@@ -774,20 +813,76 @@ body > footer p {
 
 }
 
-/@media (min-width: 43.5em) and (max-width: 60em) {
-
-        body > article:first-of-type {
-        background-color: #16172A;
-        background-size: 50em;
-        background-position: center 25%;
-    }
-
-        body > form:first-of-type {
+@media (min-width: 36em) and (max-width: 60em) {
+    
+    body > form:first-of-type {
         margin-left: auto;
         margin-right: auto;
     }
+   
+}
 
+@media (min-width: 37.5em) and (max-width: 60em) {
 
+    body > article:first-of-type {
+        background-size: 50em;
+        background-position: center 25%;
+    }
+    
+    body > header {
+        height: 4em;
+    }
+    
+    body > header div:first-of-type {
+        padding: 0.25em 0;
+    }
+
+    body > header img:first-of-type {
+        height: 2em;
+    }
+    
+    header button svg, header button[type="submit"] svg {
+        fill: #FFF;
+        width: 1.5em;
+        height: 1.5em;
+    }
+    
+    nav a {
+        font-size: 1.1em;
+    }
+    
+    body > article:first-of-type h2 {
+        font-size: 2.2em;
+    }
+    
+    body > article:first-of-type h3 {
+        font-size: 1.625em;
+    }
+    
+    body > article:first-of-type footer svg {
+        width: 1.625em;
+        height: 1.875em;
+    }
+
+    body > article:first-of-type p {
+        font-size: 1.125em;
+        margin-top: 0.275em;
+    }
+    
+    /body > footer {
+        display: grid;
+        grid-template-columns: 5em auto auto 5em;
+        grid-template-rows: ;
+    }
+    
+    /body > footer h2, body > footer ul, body > footer p {
+        grid-column: 1;
+    }
+    
+    /body > footer aside {
+        grid-column: 2;
+    }
+    
 }
 
 /@media (min-height: 30em) and (max-height: 60em) and (min-width: 60em) and (orientation: landscape) {
@@ -803,56 +898,154 @@ body > footer p {
 
 @media (min-width: 60em) {
 
-    body {
+   body {
         background-color: tomato;
         /margin: 0 4.5em;
         /display: grid;
         /grid-template-columns: 4.5em auto auto auto 4.5em;
         /grid-template-rows: auto;
     }
-
+    
     body > header {
-        height: 4em;
+        height: 5em;
     }
-
-    body main, body > footer {
-        /margin: 0 4.5em;
+    
+    body > header div:first-of-type {
+        min-width: 58em;
+        max-width: 60em;
+        padding: 0.5em 0;
+        margin: 0 auto;
     }
-
-    body > header > a > img {
+    
+    body > header img:first-of-type {
+        height: 2.5em;
+    }
+    
+    header button svg, header button[type="submit"] svg {
+        fill: #FFF;
+        width: 1.5em;
+        height: 1.5em;
+    }
+    
+    nav a {
+        font-size: 1.1em;
+    }
+    
+    body > article:first-of-type {
+        background-size: 60em;
+        background-position: center 20%;
+    }
+    
+    body > article:first-of-type h2 {
+        font-size: 2.5em;
+    }
+    
+    body > article:first-of-type h3 {
+        font-size: 1.75em;
+    }
+    
+    body > article:first-of-type header, body > article:first-of-type footer {
+        width: 65em;
+        margin: 0 auto;
+    }
+    
+    body > article:first-of-type footer {
+        margin-top: 0.25em;
+    }
+    
+    body > article:first-of-type footer svg {
+        width: 1.75em;
         height: 2em;
-        margin: 1em;
+    }
+
+    body > article:first-of-type p {
+        font-size: 1.25em;
+        margin-top: 0.175em;
+    }
+    
+    body > article:first-of-type div:last-of-type {
+        width: 65em;
+        margin: 0 auto;
+    }
+    
+    body > form:first-of-type {
+        max-width: 55em;
+        margin: 0 auto;
+        width: 100%;
     }
 
     fieldset {
-        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        padding: 0em 1em 1em 1em;
+    }
+    
+    body > form:first-of-type > fieldset legend {
+        margin: 0 48em 1em 0;
+        min-width: 7em;
+        padding: 1em;
     }
 
     body > form:first-of-type label:nth-last-of-type(n+2) {
         display: inline-flex;
-        flex-direction: row;
+        flex-direction: column;
+        margin: 0;
     }
 
     body > form:first-of-type label:first-of-type {
         border-radius: 0.25em 0 0 0.25em;
-   }
+        width: 10em;
+    }
+    
+    body > form:first-of-type label:nth-of-type(2) {
+        margin: 0 0.15em;
+        width: 10em;
+    }
 
     body > form:first-of-type label:nth-of-type(3) {
         border-radius: 0 0.25em 0.25em 0;
+        width: 10em
     }
 
     body > form:first-of-type label:last-of-type {
+        margin: 0.75em 0 0 38em;
+        align-self: flex-end;
         order: 1;
     }
 
     body > form:first-of-type button[type="submit"] {
-        font-size: 1em;
+        font-size: 1.25em;
+        width: 12em;
+        margin: 0 0 0 0.25em;
     }
 
     main article {
         margin: 0;
+        /max-width: 50%;
     }
+    
+    main {
+        max-width: 60em;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(50% 50% 50%);
+        grid-template-rows: auto;
+        grid-column-gap: 1.25em;
+        /grid-row-gap: 1.25em;
+    }
+    
+    main a:nth-of-type(3n+1) {
+        grid-column: 1;
+    }
+
+    main a:nth-of-type(3n+2) {
+        grid-column: 3;
+    }
+    
+    main a:nth-of-type(3n+3) {
+        grid-column: 3;
+    }
+    
+    
 }
 
