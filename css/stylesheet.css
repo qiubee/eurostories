@@ -108,7 +108,7 @@ body > header > a > img {
     margin: 0.5em 1em 0.5em 0.5em;
 }
 
-input[type="search"] {
+/input[type="search"] {
     height: 1.4em;
     max-width: 11.5em;
     width: 0%;
