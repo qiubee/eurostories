@@ -115,11 +115,10 @@ input[type="search"] {
     font-family: Pembroke Regular, Arial, serif;
     font-weight: 400;
     font-size: 1em;
-    border: none;
+    border-left: none;
+    border-top: none;
+    border-right: none;
     border-radius: 0;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
     border-bottom: 0.15em solid transparent;
     background-color: rgba(0, 0, 0, 0.0);
     color: #FFF;
