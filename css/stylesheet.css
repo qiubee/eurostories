@@ -140,11 +140,11 @@ header button[type="submit"] {
     padding: 0.5em 0.5em;
 }
 
-header button[type="submit"]:hover {
+header button, header button[type="submit"]:hover {
     cursor: pointer;
 }
 
-button[type="submit"] svg {
+header button svg, header button[type="submit"] svg  {
     fill: #FFF;
     height: 1.5em;
     width: 1.5em;
