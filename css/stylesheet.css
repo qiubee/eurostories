@@ -183,10 +183,11 @@ body > article:first-of-type {
 }
 
 body > article:first-of-type h2 {
-    font-family: Aspect Heavy, Georgia, serif;
+    font-family: Aspect Heavy,  Railway Sans, Georgia, serif;
     font-weight: 900;
     font-size: 2em;
     line-height: 1em;
+    text-transform: uppercase;
     color: #FFF;
     padding: 5% 0% 0% 5%;
     transition: font-size 0.5s ease-in-out;
