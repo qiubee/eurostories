@@ -512,7 +512,7 @@ main article img {
 
 main h3 {
     font-family: Pembroke Medium, Arial, serif;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.25em;
     color: #06183D;
     margin: 0;
@@ -605,7 +605,7 @@ body > footer {
 
 body > footer h2 {
     font-family: Pembroke Medium, Arial, serif;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.25em;
     color: #06183D;
     margin: 1.25em auto 0 1em;
@@ -628,7 +628,7 @@ body > footer > ul a {
 
 aside h3 {
     font-family: Pembroke Medium, Arial, serif;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.25em;
     color: #06183D;
     margin: 0.5em auto 0 1em;
