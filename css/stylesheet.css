@@ -1,5 +1,15 @@
 /* Fonts */
 
+@font-face {
+    font-family: "Railway Sans";
+    font-style: normal;
+    font-weight: 600;
+    src: url("fonts/railway-semibold.woff2") format("woff2"),
+         url("fonts/railway-semibold.woff") format("woff"),
+         url("fonts/railway-semibold.ttf") format("truetype"),
+         url("fonts/railway-semibold.otf") format("opentype");
+}
+
 
 
 /* Algemeen */
