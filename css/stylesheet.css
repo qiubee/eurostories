@@ -1,51 +1,6 @@
 /* Fonts */
 
 
-@font-face {
-    font-family: "Aspect Light";
-    font-style: normal;
-    font-weight: 300;
-    src: url("fonts/asp-lt.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Aspect Regular";
-    font-style: normal;
-    font-weight: 400;
-    src: url("fonts/asp-rg.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Aspect Heavy";
-    font-style: normal;
-    font-weight: 900;
-    src: url("fonts/asp-hv.woff2") format("woff2");
-}
-
-
-
-@font-face {
-    font-family: "Pembroke Light";
-    font-style: normal;
-    font-weight: 300;
-    src: url("fonts/pem-lt.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Pembroke Regular";
-    font-style: normal;
-    font-weight: 400;
-    src: url("fonts/pem-rg.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Pembroke Medium";
-    font-style: normal;
-    font-weight: 500;
-    src: url("fonts/pem-md.woff2") format("woff2");
-}
-
-
 
 /* Algemeen */
 
