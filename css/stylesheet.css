@@ -277,7 +277,7 @@ fieldset {
 
 body > form:first-of-type > fieldset legend {
     font-family: Pembroke Medium, Arial, serif;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1em;
     color: #FFF;
     padding: 1em 1em;
