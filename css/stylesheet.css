@@ -2,22 +2,6 @@
 
 
 @font-face {
-    font-family: "Aspect Light";
-    font-style: normal;
-    font-weight: 300;
-    src: url("fonts/asp-lt.woff2") format("woff2");
-    src: url("../css/fonts/asp-lt.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Aspect Regular";
-    font-style: normal;
-    font-weight: 400;
-    src: url("fonts/asp-rg.woff2") format("woff2");
-    src: url("../css/fonts/asp-rg.woff2") format("woff2");
-}
-
-@font-face {
     font-family: "Aspect Heavy";
     font-style: normal;
     font-weight: 900;
@@ -804,7 +788,7 @@ body > div:first-of-type > div p {
 
 body > div:first-of-type > div a:first-child {
     font-family: Pembroke Regular, Arial, serif;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 0.9em;
     margin-top: 0.25em;
     color: #24B5C9;
