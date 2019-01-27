@@ -760,6 +760,11 @@ body > div:first-of-type > div form input[type="submit"]:hover {
     background-color: #FFEB67;
 }
 
+body > div:first-of-type > div form input[type="submit"]:focus {
+    margin-top: 1.15em;
+    border: none;
+}
+
 body > div:first-of-type > div > a {
     display: block;
     font-family: Pembroke Regular, Arial, serif;
