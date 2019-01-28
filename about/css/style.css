@@ -106,7 +106,7 @@ article header {
     background-color: #24B5C9;
 }
 
-article header svg {
+article header a {
     margin: 4em auto 0 auto;
     width: 22.5em;
 }
