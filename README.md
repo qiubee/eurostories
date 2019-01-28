@@ -2,4 +2,4 @@
 
 **Website**: https://qiubee.github.io/
 
-**Documentatie**: https://qiubee.github.io/about/index.html
+**Documentatie**: https://qiubee.github.io/about/
