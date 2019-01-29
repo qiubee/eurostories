@@ -906,17 +906,20 @@ section:first-of-type p:first-of-type > span:first-of-type {
 }
 
 section:first-of-type p:first-of-type span:first-of-type span {
-    margin: 0 0 0 0.5em;
+    display: inline-flex;
+    flex-direction: row-reverse;
+    margin: 0 0 0.5em 0.5em;
 }
 
 section:first-of-type p:first-of-type span:first-of-type svg {
     width: 1.25em;
-    margin-right: 0.25em;
+    margin-right: 0.75em;
     fill: transparent;
+    transition: fill 0.5s ease;
 }
 
 section:first-of-type p:first-of-type span:first-of-type svg:last-of-type {
-    margin-right: 0em;
+    margin-right: 0.75em;
 }
 
 section:first-of-type p:first-of-type span:first-of-type svg path {
@@ -925,18 +928,26 @@ section:first-of-type p:first-of-type span:first-of-type svg path {
     stroke-linecap: round;
 }
 
+section:first-of-type p:first-of-type span:first-of-type svg:hover,
+section:first-of-type p:first-of-type span:first-of-type svg:hover ~ svg {
+    cursor: pointer;
+    fill: #24B5C9;
+}
+
 section:first-of-type p:first-of-type span:nth-of-type(2) {
     font-family: Pembroke Regular, Arial, serif;
     font-weight: 400;
     font-size: 1em;
     margin: 1em auto;
     text-align: center;
+    color: #55565A;
 }
 
 section:first-of-type > p:first-of-type a {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    width: 11.5em;
 }
 
 section:first-of-type p:first-of-type a:first-of-type svg {
@@ -948,7 +959,7 @@ section:first-of-type p:first-of-type a:first-of-type span {
     font-weight: 400;
     font-size: 1em;
     color: #24B5C9;
-    margin: auto 1em;
+    margin: 0.325em 0 auto 1em;
 }
 
 section:first-of-type p:first-of-type a:first-of-type span:hover {
