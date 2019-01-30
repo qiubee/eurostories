@@ -549,6 +549,7 @@ main a {
 main article {
     display: flex;
     flex-direction: column;
+    height: 100%;
     margin: 1.25em 1.25em 0em 1.25em;
     border: 0.1em solid rgba(36, 181, 201, 0.25);
     border-radius: 0.5em;
@@ -586,8 +587,10 @@ main h3 {
 }
 
 main footer {
-    margin: 0.25em 1.25em 1.25em 1.25em;
+    display: flex;
+    flex-direction: column;
     justify-self: flex-end;
+    margin: auto 1.25em 1.25em 1.25em;
 }
 
 article ul li:first-child {
@@ -595,7 +598,7 @@ article ul li:first-child {
     font-weight: 400;
     font-size: 1em;
     color: #55565A;
-    margin: 0 auto 0.25em 0;
+    margin: 0.25em auto 0.25em 1.25em;
 }
 
 article ul li:first-child span:last-child {
@@ -623,6 +626,7 @@ article ul li:last-child {
     font-weight: 400;
     font-size: 1em;
     color: #06183D;
+    margin-left: 1.25em;
 }
 
 article li:nth-of-type(2) svg {
