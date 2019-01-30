@@ -1225,6 +1225,181 @@ body > footer p {
 
 
 
+/* Aanmaken pop-up */
+
+body > div {
+    display: none;
+}
+
+body > div.popup {
+    display: initial;
+}
+
+body > div {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background-color: rgba(74, 74, 74, 0.4);
+}
+
+body > div > div {
+    display: flex;
+    flex-direction: column;
+    max-width: 35em;
+    margin: 6em auto;
+    background-color: #FFF;
+    border-radius: 0.5em;
+}
+
+body > div > div svg {
+    margin: 1em 1em 0 0;
+    align-self: flex-end;
+    width: 1.5em;
+    fill: #454F63;
+    transition: transform 0.15s ease;
+}
+
+body > div > div svg:hover {
+    cursor: pointer;
+    transform: scale(1.25);
+}
+
+body > div > div h2 {
+    font-family: Pembroke Medium, Arial, serif;
+    font-weight: 500;
+    font-size: 1.75em;
+    max-width: 16em;
+    margin: 0em auto;
+    text-align: center;
+    color: #06183D;
+}
+
+body > div > div > p {
+    margin: 1em 3em 0em 3em;
+    font-family: Pembroke Regular, Arial, serif;
+    font-weight: 500;
+    font-size: 1.25em;
+    text-align: center;
+    color: #06183D;
+}
+
+body > div > div > form fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+body > div > div > form legend {
+    margin: 2em auto 1em auto;
+    font-family: Aspect Heavy, Arial, serif;
+    font-weight: 500;
+    font-size: 1.75em;
+    color: #06183D;
+}
+
+body > div > div > form label {
+    display: flex;
+    flex-direction: column;
+    font-family: Pembroke Regular, Arial, serif;
+    font-weight: 400;
+    font-size: 1em;
+    color: #06183D;
+    margin: 0 auto;
+}
+
+body > div > div > form label {
+    margin-bottom: 1em;
+}
+
+body > div > div > form label:last-of-type {
+    margin-bottom: 0em;
+}
+
+body > div > div > form > fieldset input {
+    font-family: Pembroke Regular, Arial, serif;
+    font-weight: 400;
+    font-size: 1.05em;
+    color: #55565A;
+    padding: 0.75em;
+    border: solid 0.1em #24B5C9;
+    border-radius: 0.25em;
+    margin-top: 0.5em;
+    min-width: 12.75em;
+    max-width: 18.5em;
+}
+
+body > div > div > form fieldset input:focus {
+    border-color: #109FB3;
+    box-shadow: 0em 0em 0.5em rgba(36,181,201, 0.25);
+}
+
+body > div > div > form fieldset input:invalid {
+    border-color: #FFAC81;
+}
+
+body > div > div > form input[type="submit"] {
+    display: flex;
+    font-family: Pembroke Medium, Arial, serif;
+    font-weight: 500;
+    font-size: 1.25em;
+    width: 100%;
+    min-width: 12em;
+    max-width: 12.25em;
+    text-transform: uppercase;
+    color: #55565A;
+    background-color: #FFE600;
+    border: none;
+    border-bottom: solid 0.15em #DEC204;
+    border-radius: 0.25em;
+    margin: 1em auto 0 auto;
+    padding: 0.75em 0.5em;
+}
+
+body > div > div > form input[type="submit"]:hover {
+    cursor: pointer;
+    color: #684761;
+    background-color: #FFEB67;
+}
+
+body > div > div > form input[type="submit"]:focus {
+    margin-top: 1.15em;
+    border: none;
+}
+
+body > div > div > div {
+    background-color: #F5F5F5;
+    border-radius: 0.25em;
+    margin-top: 2em;
+}
+
+body > div > div > div p {
+    font-family: Pembroke Regular, Arial, serif;
+    font-weight: 400;
+    font-size: 1.1em;
+    color: #55565A;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1.25em 0;
+}
+
+body > div > div > div a {
+    max-width: 4em;
+    margin: 0.5em auto 0 auto;
+    font-family: Pembroke Regular, Arial, serif;
+    font-weight: 500;
+    font-size: 1em;
+    margin-top: 0.5em;
+    color: #24B5C9;
+}
+
+body > div > div > div a:hover {
+    color: #109FB3;
+    text-decoration: underline;
+}
+
+
 
 /* Media Queries */
 
@@ -1330,7 +1505,18 @@ body > footer p {
 
 
 
+
+
 /* Mobiel */
+
+@media (max-width: 29.125em) {
+
+        section:first-of-type > p:first-of-type a {
+        justify-content: initial;
+        margin: 0 auto;
+    }
+
+}
 
 @media (max-width: 30em) {
 
