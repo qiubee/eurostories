@@ -24,11 +24,22 @@ function removeClass() {
     navigatieBlok.classList.remove('verborgen');
     inlogKnop.classList.remove('verborgen');
 }
-document.querySelector('body > article').addEventListener('click', removeClass);
-document.querySelector('body > form:first-of-type').addEventListener('click', removeClass);
-document.querySelector('body > main').addEventListener('click', removeClass);
-document.querySelector('body > footer').addEventListener('click', removeClass);
 
+if ( document.querySelector('body > article') !== null) {
+document.querySelector('body > article').addEventListener('click', removeClass);
+}
+
+if (document.querySelector('body > form:first-of-type') !== null) {
+document.querySelector('body > form:first-of-type').addEventListener('click', removeClass);
+}
+
+if (document.querySelector('body > main') !== null) {
+document.querySelector('body > main').addEventListener('click', removeClass);
+}
+
+if (document.querySelector('body > footer') !== null) {
+document.querySelector('body > footer').addEventListener('click', removeClass);
+}
 
 function checkInput() {
 var zoekVeldLengte = document.querySelector('input[type="search"]').value.length;
