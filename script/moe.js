@@ -43,3 +43,29 @@ document.querySelector('main > article > div p:last-of-type span:first-child').a
 });
 
 
+
+document.querySelector('section:first-of-type p:first-of-type span:first-of-type svg').addEventListener('click', function () {
+    document.querySelector('body > div').classList.add('popup');
+});
+
+document.querySelector('section:first-of-type p:first-of-type span:first-of-type svg:nth-of-type(2)').addEventListener('click', function () {
+    document.querySelector('body > div').classList.add('popup');
+});
+
+document.querySelector('section:first-of-type p:first-of-type span:first-of-type svg:nth-of-type(3)').addEventListener('click', function () {
+    document.querySelector('body > div').classList.add('popup');
+});
+
+document.querySelector('section:first-of-type p:first-of-type span:first-of-type svg:nth-of-type(4)').addEventListener('click', function () {
+    document.querySelector('body > div').classList.add('popup');
+});
+
+document.querySelector('section:first-of-type p:first-of-type span:first-of-type svg:last-of-type').addEventListener('click', function () {
+    document.querySelector('body > div').classList.add('popup');
+});
+
+document.querySelector('body > div > div svg').addEventListener('click', function () {
+    document.querySelector('body > div').classList.remove('popup');
+});
+
+
